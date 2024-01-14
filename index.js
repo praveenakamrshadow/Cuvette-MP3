@@ -321,40 +321,40 @@ const foodData = [
     },
 ];
 
-// Function to list all the food items
+
 const listAllFoods = (data) => {
     return data.map((item) => item.foodname);
 };
 
-// Function to list food items by category
+
 const listFoodsByCategory = (data, category) => {
     return data
         .filter((item) => item.category === category)
         .map((item) => item.foodname);
 };
 
-// Function to list food items with calories above 100
+
 const listFoodsAboveCalories = (data, calorieLimit) => {
     return data
         .filter((item) => item.calorie > calorieLimit)
         .map((item) => item.foodname);
 };
 
-// Function to list food items with calories below 100
+
 const listFoodsBelowCalories = (data, calorieLimit) => {
     return data
         .filter((item) => item.calorie < calorieLimit)
         .map((item) => item.foodname);
 };
 
-// Function to list food items sorted by highest protein content to lowest
+
 const listFoodsByProteinContent = (data) => {
     return data
         .sort((a, b) => b.protiens - a.protiens)
         .map((item) => item.foodname);
 };
 
-// Function to list food items sorted by lowest carb content to highest
+
 const listFoodsByCarbContent = (data) => {
     return data.sort((a, b) => a.cab - b.cab).map((item) => item.foodname);
 };
